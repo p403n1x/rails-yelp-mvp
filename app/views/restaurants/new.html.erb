@@ -1,0 +1,14 @@
+<h1>Restaurant#new</h1>
+
+<div class="container">
+<%= link_to "back", restaurants_path %>
+</div>
+
+<div class="container">
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"] %>
+  <%= f.submit "Create new Resto", class: "btn btn-primary" %>
+<% end %>
+</div>
